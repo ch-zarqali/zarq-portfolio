@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Benjamin Smith | Graphic Designer & Photographer",
-  description: "Professional portfolio of Benjamin Smith - Creative Art Director, Designer & Photographer",
+  title: "Zarq Portfolio",
+  description: "Professional portfolio of Muhammad Zarq - Amazon FBA Private Label Virtual Assistant specializing in product research, listing optimization, and PPC advertising.",
 };
 
 export default function RootLayout({ children }) {
