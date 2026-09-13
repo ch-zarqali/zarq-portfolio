@@ -54,7 +54,7 @@ export default function PreviousProjectsSection() {
     <div className="inner-page-content">
       {/* Signature Framed Header */}
       <div className="section-title-frame">
-        <h2 className="section-main-heading">PREVIOUS PROJECT</h2>
+        <h2 className="section-main-heading">PREVIOUS PL PROJECT</h2>
       </div>
 
       {/* 2x2 Projects Grid */}

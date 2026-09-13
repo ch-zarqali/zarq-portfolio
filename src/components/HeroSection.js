@@ -14,9 +14,7 @@ export default function HeroSection({ onNavigate }) {
         </div>
 
         <p className="hero-description">
-          Results-driven Amazon FBA Private Label Virtual Assistant specializing in
-          profitable product research, supplier sourcing, high-converting listing
-          optimization, and strategic PPC advertising to scale brands profitably.
+          Aspiring Amazon FBA Virtual Assistant specializing in product research, competitor analysis, keyword research, listing optimization, and profitability analysis. Focused on accurate research, practical insights, and well-organized Amazon support.
         </p>
       </div>
 

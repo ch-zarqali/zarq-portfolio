@@ -28,7 +28,7 @@ export default function AboutSection() {
           <div className="about-pillar-card">
             <span className="about-pillar-number">02</span>
             <p className="about-pillar-text">
-              My portfolio includes practice projects designed to demonstrate my research process, analytical thinking, and understanding of Amazon FBA Private Label operations.
+              My portfolio includes projects designed to demonstrate my research process, analytical thinking, and understanding of Amazon FBA Private Label operations.
             </p>
           </div>
 

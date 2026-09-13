@@ -58,7 +58,6 @@ export default function PortfolioSection() {
               <div key={idx} className="skill-bar-row">
                 <div className="skill-row-top">
                   <span className="skill-label-text">{skill.name}</span>
-                  <span className="skill-badge-pro">PRO</span>
                 </div>
                 <div className="skill-bar-track">
                   <div className="skill-bar-fill" style={{ width: skill.level }} />
