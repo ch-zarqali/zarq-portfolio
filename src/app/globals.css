@@ -1005,6 +1005,222 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   SNAPSHOTS BLOCK
+   -------------------------------------------------------------------------- */
+.snapshots-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.snapshot-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+  border-top: 3px solid var(--primary-yellow);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.snapshot-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 16px 0;
+}
+
+.snapshot-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #F4F5F7;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.snapshot-stat-pill strong {
+  color: #111111;
+  font-weight: 700;
+}
+
+.snapshot-image-preview-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #F8F9FA;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-top: auto;
+}
+
+.snapshot-image-preview-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.snapshot-image-preview-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.snapshot-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.snapshot-image-preview-wrapper:hover .snapshot-image-overlay {
+  opacity: 1;
+}
+
+.snapshot-expand-badge {
+  background: #FFFFFF;
+  color: #111111;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Lightbox Modal */
+.snapshot-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: snapshotFadeIn 0.2s ease;
+}
+
+@keyframes snapshotFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.snapshot-lightbox-content {
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  animation: snapshotZoomIn 0.25s ease;
+}
+
+@keyframes snapshotZoomIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.snapshot-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: #FAFAFA;
+  gap: 12px;
+}
+
+.snapshot-lightbox-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 0.5px;
+}
+
+.snapshot-lightbox-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.snapshot-lightbox-open-btn {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+  background: var(--primary-yellow);
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.snapshot-lightbox-open-btn:hover {
+  background: #e6a200;
+}
+
+.snapshot-lightbox-close-btn {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #444444;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.snapshot-lightbox-close-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+.snapshot-lightbox-body {
+  overflow: auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+}
+
+.snapshot-lightbox-body img {
+  max-width: 100%;
+  max-height: 74vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------------------------------------------------------
    CONTACT BLOCK
    -------------------------------------------------------------------------- */
 .contact-grid-layout {
@@ -1422,6 +1638,16 @@ img {
   .project-sheet-link {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Snapshots Mobile */
+  .snapshots-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .snapshot-image-preview-wrapper img {
+    height: 180px;
   }
 
   /* Testimonials Mobile */

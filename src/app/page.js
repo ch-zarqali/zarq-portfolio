@@ -7,6 +7,8 @@ import ResumeSection from "@/components/ResumeSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import PreviousProjectsSection from "@/components/PreviousProjectsSection";
 import ProductOpportunityScorecardSection from "@/components/ProductOpportunityScorecardSection";
+import SnapshotsSection from "@/components/SnapshotsSection";
+import PreviousWholesaleProjectsSection from "@/components/PreviousWholesaleProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import NavigationDock from "@/components/NavigationDock";
 
@@ -75,7 +77,17 @@ export default function Home() {
           <ProductOpportunityScorecardSection />
         </section>
 
-        {/* Block 7: Contact */}
+        {/* Block 7: Snapshots */}
+        <section id="snapshots" className="portfolio-card-block">
+          <SnapshotsSection />
+        </section>
+
+        {/* Block 8: Previous Wholesale Projects */}
+        <section id="previous-wholesale-projects" className="portfolio-card-block">
+          <PreviousWholesaleProjectsSection />
+        </section>
+
+        {/* Block 9: Contact */}
         <section id="contact" className="portfolio-card-block">
           <ContactSection />
         </section>

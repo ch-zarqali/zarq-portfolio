@@ -11,8 +11,8 @@ export default function PreviousProjectsSection() {
       description:
         "Comprehensive Amazon FBA Private Label product research sheet including product criteria validation, sales metrics, and market potential analysis.",
       sheetLink:
-        "https://docs.google.com/spreadsheets/d/17aZCADH2JkG_lo-5YcgTMsmc5Gxj5p4-3Qt6OWEmu_U/edit?usp=drive_link",
-      sheetTitle: "FBA Product Research Sheet",
+        "https://docs.google.com/spreadsheets/d/1izst0B41oIh05MW8em2JXlQUCQ6gyvw0FmiP3NAFz9A/edit?usp=sharing",
+      sheetTitle: "Product Research",
       sheetSub: "Google Sheets Deliverable",
     },
     {
@@ -46,6 +46,17 @@ export default function PreviousProjectsSection() {
       sheetLink:
         "https://docs.google.com/spreadsheets/d/1348ktalujOjcIvMPkxdKUJmNirjPjCp4XUaqjUdMwZU/edit?usp=drive_link",
       sheetTitle: "FBA Profitability Calculation Sheet",
+      sheetSub: "Google Sheets Deliverable",
+    },
+    {
+      number: "05",
+      title: "Product Research",
+      badge: "GOOGLE SHEETS",
+      description:
+        "Comprehensive Amazon FBA Private Label product research sheet including product criteria validation, sales metrics, and market potential analysis.",
+      sheetLink:
+        "https://docs.google.com/spreadsheets/d/17aZCADH2JkG_lo-5YcgTMsmc5Gxj5p4-3Qt6OWEmu_U/edit?usp=drive_link",
+      sheetTitle: "FBA Product Research Sheet",
       sheetSub: "Google Sheets Deliverable",
     },
   ];
